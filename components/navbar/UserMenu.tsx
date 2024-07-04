@@ -17,6 +17,25 @@ type Props = {
   currentUser?: SafeUser | null;
 };
 
+const menuItems = [
+  {
+    label: "My Booking",
+    Link: "/Mybooking",
+  },
+  {
+    label: "My favorites",
+    Link: "/favorites",
+  },
+  {
+    label: "Bookings",
+    Link: "/bookings",
+  },
+  {
+    label: "settings",
+    Link: "/setting",
+  },
+];
+
 function UserMenu({ currentUser }: Props) {
   const router = useRouter();
   const registerModel = useRegisterModal();
@@ -43,7 +62,7 @@ function UserMenu({ currentUser }: Props) {
           className="hidden md:block text-sm font-semibold py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer"
           onClick={onRent}
         >
-          Airbnb your Home
+          Traiteur your Home
         </div>
         <div
           onClick={toggleOpen}
@@ -70,23 +89,16 @@ function UserMenu({ currentUser }: Props) {
           <div className="flex flex-col cursor-pointer">
             {currentUser ? (
               <>
-                <MenuItem
-                  onClick={() => router.push("/trips")}
-                  label="My trips"
-                />
-                <MenuItem
-                  onClick={() => router.push("/favorites")}
-                  label="My favorites"
-                />
-                <MenuItem
-                  onClick={() => router.push("/reservations")}
-                  label="My reservations"
-                />
-                <MenuItem
-                  onClick={() => router.push("/properties")}
-                  label="My properties"
-                />
-                <MenuItem onClick={onRent} label="Airbnb your home" />
+                {menuItems.map((item) => (
+                  <MenuItem
+                    key={item.label}
+                    onClick={() => router.push(item.Link)}
+                    label={item.label}
+                  />
+                ))}
+
+              
+                <MenuItem onClick={onRent} label="Traiteur your home" />
                 <hr />
                 <MenuItem onClick={() => signOut()} label="Logout" />
               </>

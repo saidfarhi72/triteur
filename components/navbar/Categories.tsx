@@ -12,6 +12,7 @@ import {
   GiForestCamp,
   GiIsland,
   GiWindmill,
+  GiOpenedFoodCan,
 } from "react-icons/gi";
 import { IoDiamond } from "react-icons/io5";
 import { MdOutlineVilla } from "react-icons/md";
@@ -21,81 +22,67 @@ import Container from "../Container";
 
 export const categories = [
   {
-    label: "Beach",
+    label: "Wedding Caterers",
     icon: TbBeach,
-    description: "This property is close to the beach!",
+    description: "Specialize in catering for weddings!",
   },
   {
-    label: "Windmills",
+    label: "Corporate Caterers",
     icon: GiWindmill,
-    description: "This property is has windmills!",
+    description: "Provide catering for corporate events!",
   },
   {
-    label: "Modern",
+    label: "Event Caterers",
     icon: MdOutlineVilla,
-    description: "This property is modern!",
+    description: "Cater to various events such as birthdays and anniversaries!",
   },
   {
-    label: "Countryside",
+    label: "Buffet Caterers",
     icon: TbMountain,
-    description: "This property is in the countryside!",
+    description: "Specialize in buffet-style service!",
   },
   {
-    label: "Pools",
-    icon: TbPool,
-    description: "This is property has a beautiful pool!",
+    label: "Food Truck Caterers",
+    icon: GiOpenedFoodCan,
+    description: "Provide catering services through food trucks!",
   },
   {
-    label: "Islands",
+    label: "Gourmet Caterers",
     icon: GiIsland,
-    description: "This property is on an island!",
+    description: "Provide high-end catering with gourmet dishes!",
   },
   {
-    label: "Lake",
+    label: "Ethnic Caterers",
     icon: GiBoatFishing,
-    description: "This property is near a lake!",
+    description: "Specialize in specific types of cuisine!",
   },
   {
-    label: "Skiing",
+    label: "Kosher Caterers",
     icon: FaSkiing,
-    description: "This property has skiing activies!",
+    description: "Offer catering services that adhere to kosher dietary laws!",
   },
   {
-    label: "Castles",
+    label: "Vegan and Vegetarian Caterers",
     icon: GiCastle,
-    description: "This property is an ancient castle!",
+    description: "Provide catering services with vegan and vegetarian dishes!",
   },
   {
-    label: "Caves",
+    label: "BBQ Caterers",
     icon: GiCaveEntrance,
-    description: "This property is in a spooky cave!",
+    description: "Specialize in barbecue-style catering!",
   },
   {
-    label: "Camping",
+    label: "Dessert Caterers",
     icon: GiForestCamp,
-    description: "This property offers camping activities!",
+    description: "Focus on providing a variety of desserts!",
   },
   {
-    label: "Arctic",
+    label: "Cocktail Caterers",
     icon: BsSnow,
-    description: "This property is in arctic environment!",
-  },
-  {
-    label: "Desert",
-    icon: GiCactus,
-    description: "This property is in the desert!",
-  },
-  {
-    label: "Barns",
-    icon: GiBarn,
-    description: "This property is in a barn!",
-  },
-  {
-    label: "Lux",
-    icon: IoDiamond,
-    description: "This property is brand new and luxurious!",
+    description: "Specialize in providing beverages and light snacks!",
   },
 ];
+
 
 type Props = {};
 
